@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,3 +15,6 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t devops-app .
+
+    - name: Simulate Deploy
+      run: echo "Deploying to Kubernetes..."
